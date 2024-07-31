@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
-RUN apt install openjdk-17-jdk
+RUN apt-get update
+RUN apt-get install -y openjdk-17-jdk
 WORKDIR /app
 COPY . /app
 EXPOSE 8079
