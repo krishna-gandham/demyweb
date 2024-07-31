@@ -1,9 +1,5 @@
-FROM ubuntu:20.04
+FROM openjdk:17-jdk-slim
 WORKDIR /app
-RUN apt update -y
-RUN apt install openjdk-17-jdk -y
-RUN apt install maven -y
-RUN mvn clean install
 COPY target/*.war /app/app.war
 EXPOSE 8079
-CMD ["java","-jar","app.war"]
+CMD ["java" ,"-jar" ,"/app/app.war"]
