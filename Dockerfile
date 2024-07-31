@@ -1,5 +1,7 @@
-FROM openjdk:17-jdk-slim
+FROM openjdk-17-jdk
 WORKDIR /app
+RUN apt install maven -y
+RUN mvn clean install
 COPY target/*.war /app/app.war
 EXPOSE 8079
 CMD ["java" ,"-jar" ,"/app/app.war"]
