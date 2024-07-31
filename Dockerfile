@@ -3,4 +3,4 @@ WORKDIR /app
 COPY . /app 
 COPY target/*.war /app/app.war
 EXPOSE 8079
-CMD ["java" ,"-jar" ,"/app/app.war"]
+CMD ["java" ,"-jar" ,"target/Demy-0.0.1-SNAPSHOT.war"]
