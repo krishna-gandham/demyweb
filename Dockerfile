@@ -1,6 +1,5 @@
 FROM ubuntu:20.04
 WORKDIR /app
-WORKDIR /app
 COPY . /app
 RUN apt update -y
 RUN apt install openjdk-11-jdk -y
