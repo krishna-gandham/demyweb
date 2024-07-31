@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 WORKDIR /app
 RUN apt update -y
-RUN apt install openjdk-11-jdk -y
+RUN apt install openjdk-17-jdk -y
 RUN apt install maven -y
 RUN mvn clean install
 COPY target/*.war /app/app.war
